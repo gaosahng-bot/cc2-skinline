@@ -71,6 +71,9 @@ class Quat:
     def conjugate(self) -> "Quat":
         return Quat(-self.x, -self.y, -self.z, self.w)
 
+    def dot(self, o: "Quat") -> float:
+        return self.x * o.x + self.y * o.y + self.z * o.z + self.w * o.w
+
     def normalized(self) -> "Quat":
         n = math.sqrt(self.x ** 2 + self.y ** 2 + self.z ** 2 + self.w ** 2)
         if n < 1e-12:
@@ -83,7 +86,7 @@ class Quat:
             self.w * o.y - self.x * o.z + self.y * o.w + self.z * o.x,
             self.w * o.z + self.x * o.y - self.y * o.x + self.z * o.w,
             self.w * o.w - self.x * o.x - self.y * o.y - self.z * o.z,
-        ).normalized()
+        )
 
     def rotate(self, v: Vec3) -> Vec3:
         qv = Quat(v.x, v.y, v.z, 0)
