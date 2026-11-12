@@ -1,0 +1,128 @@
+{
+  "fps": 30,
+  "duration": 1.6,
+  "in_place": false,
+  "blend": {
+    "from": "walk",
+    "to": "run",
+    "param": [
+      {
+        "time": 0.0,
+        "value": 0.0
+      },
+      {
+        "time": 0.4,
+        "value": 0.0
+      },
+      {
+        "time": 1.2,
+        "value": 1.0
+      },
+      {
+        "time": 1.6,
+        "value": 1.0
+      }
+    ]
+  },
+  "additive": {
+    "clip": "reach_add",
+    "weight": [
+      {
+        "time": 0.0,
+        "value": 0.0
+      },
+      {
+        "time": 0.8,
+        "value": 0.0
+      },
+      {
+        "time": 1.1,
+        "value": 1.0
+      },
+      {
+        "time": 1.6,
+        "value": 1.0
+      }
+    ]
+  },
+  "ik": {
+    "end_effector": "hand",
+    "upper": "upper_arm",
+    "lower": "lower_arm",
+    "pole_offset": [
+      0.0,
+      0.2,
+      0.15
+    ],
+    "weight": [
+      {
+        "time": 0.0,
+        "value": 0.0
+      },
+      {
+        "time": 0.8,
+        "value": 0.0
+      },
+      {
+        "time": 0.9,
+        "value": 1.0
+      },
+      {
+        "time": 1.6,
+        "value": 1.0
+      }
+    ],
+    "target": [
+      {
+        "time": 0.8,
+        "p": [
+          -0.15,
+          1.35,
+          1.1
+        ]
+      },
+      {
+        "time": 1.2,
+        "p": [
+          -0.1,
+          1.55,
+          2.0
+        ]
+      },
+      {
+        "time": 1.6,
+        "p": [
+          0.05,
+          1.45,
+          2.7
+        ]
+      }
+    ],
+    "pole": [
+      {
+        "time": 0.8,
+        "p": [
+          -0.35,
+          1.2,
+          0.9
+        ]
+      },
+      {
+        "time": 1.6,
+        "p": [
+          -0.25,
+          1.25,
+          2.5
+        ]
+      }
+    ]
+  },
+  "preview_frames": [
+    0,
+    12,
+    24,
+    30,
+    36,
+    47
+  ]
+}
